@@ -9,7 +9,7 @@ import argparse
 import sys
 import webbrowser
 from tabulate import tabulate
-from . import *
+from __init__ import *
 from load_config import *
 from utilities import *
 

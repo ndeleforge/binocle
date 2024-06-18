@@ -1,5 +1,5 @@
 from tabulate import tabulate
-from . import NAME, VERSION
+from __init__ import NAME, VERSION
 from binocle import ENGINES
 
 def show_version() :

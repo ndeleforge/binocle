@@ -1,6 +1,6 @@
 import json
 import sys
-from . import PATH
+from __init__ import PATH
 
 def load_json(name_file):
     """ 
@@ -8,7 +8,7 @@ def load_json(name_file):
     """
     
     try:
-        with open(f"{PATH}/data/{name_file}.json", 'r', encoding='utf-8') as file:
+        with open(f"{PATH}/config/{name_file}.json", 'r', encoding='utf-8') as file:
             FILE = json.load(file)
             return FILE.get(name_file, [])
     except FileNotFoundError:
