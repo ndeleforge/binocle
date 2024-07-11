@@ -29,9 +29,17 @@
 ```BASH
 git clone https://github.com/ndeleforge/binocle.git
 ```
-- Some dependancies are required, in Binocle's folder, launch the following command :
+
+- Some dependancies are required, launch the following commands :
 ```BASH
+cd binocle
 pip install -r requirements.txt
+```
+
+- Launch Binocle
+```BASH
+cd launcher
+binocle
 ```
 
 ## Usage and examples
@@ -109,7 +117,7 @@ Edit the `/config/engines.json` file and follow this template :
 # Integration
 ## Terminal
 
-Binocle can be launched throught a terminal with the command `binocle`. The idea is to add Binocle's `scripts` folder in your *PATH* global variable.  
+Binocle can be launched throught a terminal with the command `binocle`. The idea is to add Binocle's `launcher` folder in your *PATH* global variable.  
 It is doable for Windows with `binocle.bat` and Linux with `binocle.sh` which both are a shortcut for `binocle.py`.
 
 ## AutoHotKey
