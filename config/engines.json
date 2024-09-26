@@ -85,6 +85,11 @@
             "name": "Reddit",
             "keyword": "re",
             "url": "https://www.reddit.com/search/?q="
+        },
+        {
+            "name": "Metacritic",
+            "keyword": "meta",
+            "url": "https://www.metacritic.com/search/"
         }
     ]
 }

@@ -11,38 +11,59 @@
 
 
 # Table of contents
-* [Quick start](#Quick-start)
-    * [Installation](#Installation)
-    * [Usage and examples](#Usage-and-examples)
+* [Installation](#Installation)
+    * [Requirements](#Requirements)
+    * [Virtual environment](#Virtual-environment)
+        * [For Windows](#For-Windows)
+        * [For Linux](#For-Linux)
+    * [Launch](#Launch)
+* [Usage and examples](#Usage-and-examples)
 * [Engines in details](#Engines-in-details)
 	* [Engines list](#Engines-list)
     * [How to add an engine](#How-to-add-an-engine)
-* [Integration](#Integration)
-    * [Terminal](#Terminal)
-    * [AutoHotKey](#AutoHotKey)
+* [Integration with terminal](#Integration-with-terminal)
 
-# Quick start
-## Installation
+# Installation
+## Requirements
 
-- Python must be installed on your device.
-- Either, download the last release or launch the following command :
+- Python is required.
+- Download the last release OR launch the following command
 ```BASH
 git clone https://github.com/ndeleforge/binocle.git
 ```
-
-- Some dependancies are required, launch the following commands :
+- Move into the folder of Binocle
 ```BASH
 cd binocle
-pip install -r requirements.txt
 ```
 
+## Virtual environment
+
+Even if it's optionnal, it is recommended to create a virutal environment.
+
+### For Windows
+```BASH
+py -m venv venv
+venv\Scripts\activate
+```
+
+### For Linux
+```BASH
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## Launch
+- To install Python dependencies, launch the following commands
+```BASH
+pip install -r requirements.txt
+```
 - Launch Binocle
 ```BASH
 cd launcher
 binocle
 ```
 
-## Usage and examples
+# Usage and examples
 
 Binocle has two ways of working :
 - Using default engine search
@@ -79,24 +100,25 @@ There are also some optionnals arguments :
 ## Engines list
 
 | Keyword | Search on
-| :------ | :-------------------
-| alt     | [Alternative To](https://alternativeto.net)
-| b       | [Bing](https://www.bing.com)
-| ch      | [Chocolatey](https://chocolatey.org)
-| d       | [Duckduckgo](https://duckduckgo.com)
-| e       | [Ecosia](https://www.ecosia.org)
-| g       | [Google](https://google.com)
-| gi      | [Github](https://github.com)
-| hltb    | [HowLongTo Beat](https://howlongtobeat.com/)
-| li      | [LinkedIn](https://www.linkedin.com)
-| mal     | [MyAnimeList](https://myanimelist.net)
-| q       | [Qwant](https://qwant.com)
-| re      | [Reddit](https://www.reddit.com)
-| s       | [Startpage](https://startpage.com)
-| so      | [StackOverflow](https://stackoverflow.com)
-| tw      | [Twitch](https://twitch.com)
-| wi      | [Wikipedia](https://wikipedia.org/wiki/)
-| yt      | [Youtube](https://youtube.com)
+| ------------ | -------------------
+| alt | [Alternative To](https://alternativeto.net)
+| b | [Bing](https://www.bing.com)
+| ch | [Chocolatey](https://chocolatey.org)
+| d | [Duckduckgo](https://duckduckgo.com)
+| e | [Ecosia](https://www.ecosia.org)
+| g | [Google](https://google.com)
+| gi | [Github](https://github.com)
+| hltb | [HowLongTo Beat](https://howlongtobeat.com/)
+| li | [LinkedIn](https://www.linkedin.com)
+| meta | [Metacritic](https://metacritic.com)
+| mal | [MyAnimeList](https://myanimelist.net)
+| q | [Qwant](https://qwant.com)
+| re | [Reddit](https://www.reddit.com)
+| s | [Startpage](https://startpage.com)
+| so  | [StackOverflow](https://stackoverflow.com)
+| tw | [Twitch](https://twitch.com)
+| wi | [Wikipedia](https://wikipedia.org/wiki/)
+| yt | [Youtube](https://youtube.com)
 
 
 ## How to add an engine
@@ -114,36 +136,7 @@ Edit the `/config/engines.json` file and follow this template :
 }
 ```
 
-# Integration
-## Terminal
+# Integration with terminal
 
 Binocle can be launched throught a terminal with the command `binocle`. The idea is to add Binocle's `launcher` folder in your *PATH* global variable.  
 It is doable for Windows with `binocle.bat` and Linux with `binocle.sh` which both are a shortcut for `binocle.py`.
-
-## AutoHotKey
-
-Binocle can be launched with a keyboard shortcut.
-
-Here is an example of what can be done with AHK :
-```AHK
-; Call Binocle [CTRL + ALT + B]
-^!B::
-	gui, Add, Text, x10 y10 w180 h15, Enter your request :
-	gui, Add, Edit, x10 y40 w180 h20 vUserInput
-	gui, Add, Button, x20 y80 w60 h0 gStartBinocle Default Hidden, OK
-	gui, +Border -SysMenu +Caption
-	gui, Show, , 👓 Binocle
-return
-
-StartBinocle:
-	gui, Submit, NoHide
-	if (userInput != "") {
-		run, python /path/to/Binocle %userInput%
-	}
-	gui, Destroy
-return
-```
-
-*If you want to use this macro, do not forget to replace the path for the Binocle Python file!*
-
-To explain, when you type on CTRL ALT and B at the same time, it will trigger the first macro and create a GUI with an input. You can then type your Binocle request and type on Enter, which will trigger the second macro.

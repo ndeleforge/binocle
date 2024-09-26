@@ -1,5 +1,10 @@
 #!/bin/sh
 
-dir=$(d=$(dirname "$0"); cd "$d" && pwd)
-dir=$(echo $dir | sed 's/ /\ /g')
-python3 "${dir}/../source/binocle.py" "$@"
+dir=$(dirname "$0")
+venv_dir="${dir}/../venv"
+
+if [ -d "$venv_dir" ]; then
+    . "${venv_dir}/bin/activate"
+fi
+
+ python3 "${dir}/../source/binocle.py" "$@"

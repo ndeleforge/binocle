@@ -79,6 +79,9 @@ def binocle():
     Main function of the Binocle search application.
     """
 
+    if CONFIG["warning_venv"] and not is_virtual_env():
+        print("warning : binocle is currently not running into a virtual environment.\n")
+
     # No argument, display help
     if NBARGS == 0:
         parser.print_help(sys.stderr)
