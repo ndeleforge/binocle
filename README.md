@@ -138,5 +138,5 @@ Edit the `/config/engines.json` file and follow this template :
 
 # Integration with terminal
 
-Binocle can be launched throught a terminal with the command `binocle`. The idea is to add Binocle's `launcher` folder in your *PATH* global variable.  
+Binocle can be launched throught a terminal with the command `binocle`. The idea is to add Binocle folder in your *PATH* global variable.  
 It is doable for Windows with `binocle.bat` and Linux with `binocle.sh` which both are a shortcut for `binocle.py`.
