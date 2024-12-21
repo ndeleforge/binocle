@@ -7,4 +7,4 @@ if [ -d "$venv_dir" ]; then
     . "${venv_dir}/bin/activate"
 fi
 
- python3 "${dir}/source/binocle.py" "$@"
+python3 "${dir}/source/binocle.py" "$@"
