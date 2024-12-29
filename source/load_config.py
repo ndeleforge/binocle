@@ -3,9 +3,7 @@ import sys
 from __init__ import PATH
 
 def load_json(name_file):
-    """ 
-    Load a JSON file and returns the values
-    """
+    """ Load a JSON file and returns the values """
     
     try:
         with open(f"{PATH}/config/{name_file}.json", 'r', encoding='utf-8') as file:
@@ -19,10 +17,8 @@ def load_json(name_file):
         sys.exit(1)
 
 def check_uniqueness(engines):
-    """
-    Check if specified fields in the JSON config file are unique. If not, returns an error.
-    """
-    
+    """ Check if specified fields in the JSON config file are unique. If not, returns an error """
+
     json_fields = ['name', 'keyword', 'url']
 
     def check_field(field):

@@ -1,8 +1,7 @@
 """
 Look everything, everywhere.
 
-Usage:
-    binocle "my research"
+Usage: binocle "my research"
 """
 
 import argparse
@@ -41,9 +40,7 @@ check_uniqueness(ENGINES)
 #
 
 def search_engine() :
-    """
-    Search for the correct engine.
-    """
+    """ Search for the correct engine """
 
     chosen_engine = parser.parse_args().engine
     query = parser.parse_args().query
@@ -59,9 +56,7 @@ def search_engine() :
     )
 
 def  launch_search(engine, query) :
-    """
-    Launch a search on the specified engine with the given query.
-    """
+    """ Launch a search on the specified engine with the given query """
 
     query_formatted = engine['url'] + query.replace(' ', '%20')
     table_data = [
@@ -75,9 +70,7 @@ def  launch_search(engine, query) :
     webbrowser.open(query_formatted, new=2)
 
 def binocle():
-    """
-    Main function of the Binocle search application.
-    """
+    """ Main function of the Binocle search application """
 
     if CONFIG["warning_venv"] and not is_virtual_env():
         print("warning : binocle is currently not running into a virtual environment.\n")
