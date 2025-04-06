@@ -7,9 +7,9 @@ Usage: binocle "my research"
 import argparse
 import sys
 import webbrowser
-from tabulate import tabulate
 from __init__ import *
 from load_config import *
+from tabulate import tabulate
 from utilities import *
 
 #
@@ -31,9 +31,10 @@ NBARGS = len(sys.argv) - 1
 # Load configuration
 #
 
-CONFIG = load_json("config")
 ENGINES = load_json("engines")
 check_uniqueness(ENGINES)
+CONFIG = load_json("config")
+check_config(CONFIG, ENGINES)
 
 #
 # Search functions

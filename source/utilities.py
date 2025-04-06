@@ -1,7 +1,7 @@
-from tabulate import tabulate
+import sys
 from __init__ import NAME, VERSION
 from binocle import ENGINES
-import sys
+from tabulate import tabulate
 
 def show_version() :
     """ Display the name and the version """
