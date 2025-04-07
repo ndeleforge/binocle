@@ -9,8 +9,8 @@ import sys
 import webbrowser
 from __init__ import *
 from load_config import *
-from tabulate import tabulate
 from utilities import *
+from tabulate import tabulate
 
 #
 # Arguments
@@ -66,7 +66,7 @@ def  launch_search(engine, query) :
         ["Formatted query", query_formatted]
     ]
 
-    show_version()
+    show_version(NAME, VERSION)
     print(tabulate(table_data, tablefmt="plain"))
     webbrowser.open(query_formatted, new=2)
 
@@ -93,12 +93,12 @@ def binocle():
 
         # Show version
         if arg in ('-v', '--version'):
-            show_version()
+            show_version(NAME, VERSION)
             sys.exit(1)
 
         # Show engine list
         if arg in ('-l', '--list'):
-            show_engines()
+            show_engines(ENGINES)
             sys.exit(1)
 
         # Default engine
