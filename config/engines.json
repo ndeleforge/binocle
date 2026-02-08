@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Bing",
+        "keyword": "b",
+        "url": "https://www.bing.com/search?q="
+    },
+    {
+        "name": "Duckduckgo",
+        "keyword": "d",
+        "url": "https://duckduckgo.com/?q="
+    },
+    {
+        "name": "Ecosia",
+        "keyword": "e",
+        "url": "https://www.ecosia.org/search?method=index&q="
+    },
+    {
+        "name": "Google",
+        "keyword": "g",
+        "url": "https://google.fr/search?q="
+    },
+    {
+        "name": "Qwant",
+        "keyword": "q",
+        "url": "https://www.qwant.com/?q="
+    },
+    {
+        "name": "Startpage",
+        "keyword": "s",
+        "url": "https://www.startpage.com/do/search?url="
+    },
+    {
+        "name": "Alternative To",
+        "keyword": "alt",
+        "url": "https://alternativeto.net/browse/search/?q="
+    },
+    {
+        "name": "How Long To Beat",
+        "keyword": "hltb",
+        "url": "https://howlongtobeat.com/?q="
+    },
+    {
+        "name": "My Anime List",
+        "keyword": "mal",
+        "url": "https://myanimelist.net/search/all?q="
+    },
+    {
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "url": "https://wikipedia.org/wiki/"
+    },
+    {
+        "name": "Twitch",
+        "keyword": "tw",
+        "url": "https://www.twitch.tv/search?term="
+    },
+    {
+        "name": "YouTube",
+        "keyword": "yt",
+        "url": "https://www.youtube.com/results?search_url="
+    },
+    {
+        "name": "Chocolatey",
+        "keyword": "ch",
+        "url": "https://community.chocolatey.org/packages?q="
+    },
+    {
+        "name": "Github",
+        "keyword": "gi",
+        "url": "https://github.com/search?q="
+    },
+    {
+        "name": "StackOverflow",
+        "keyword": "so",
+        "url": "https://stackoverflow.com/search?q="
+    },
+    {
+        "name": "LinkedIn",
+        "keyword": "li",
+        "url": "https://www.linkedin.com/search/results/all/?keywords="
+    },
+    {
+        "name": "Reddit",
+        "keyword": "re",
+        "url": "https://www.reddit.com/search/?q="
+    },
+    {
+        "name": "Metacritic",
+        "keyword": "meta",
+        "url": "https://www.metacritic.com/search/"
+    }
+]
